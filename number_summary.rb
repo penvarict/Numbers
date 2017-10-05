@@ -33,5 +33,24 @@ def median(array)
 
 end
 
-print median([12,13,14,16,19,19,100,110])
+
 # print median([1,2,3,4,5,6])
+
+def standard_deviation(array) #find mean, subtract mean and square result, average of squared diff
+    mean_num = mean(array)
+    squaredDiff = []
+
+    array.each_with_index do |number,i|
+        squaredDiff.push((mean_num-number[i])*(mean_num-number[i]))
+
+
+    end
+
+    return mean(squaredDiff)
+
+
+end
+
+
+
+print standard_deviation([6,2,3,1])
